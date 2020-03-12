@@ -12,8 +12,8 @@
       "value": null,
       "error": null,
       "errorMessage": null,
-      "x_axis": 0,
-      "y_axis": 0
+      "x_axis": 50,
+      "y_axis": 350
     },
     {
       "ip": "192.168.0.59",
@@ -24,8 +24,8 @@
       "value": null,
       "error": null,
       "errorMessage": null,
-      "x_axis": 0,
-      "y_axis": 0
+      "x_axis": 780,
+      "y_axis": 190
     }
   ]
 }
