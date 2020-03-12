@@ -1,0 +1,31 @@
+{
+  "id": "ahu_2",
+  "title": "BACnet Graphic - AHU-2",
+  "template": "ahu_v1.png",
+  "points": [
+    {
+      "ip": "192.168.0.59",
+      "deviceId": 260001,
+      "pointInstance": 1,
+      "objectType": 2,
+      "name": null,
+      "value": null,
+      "error": null,
+      "errorMessage": null,
+      "x_axis": 0,
+      "y_axis": 0
+    },
+    {
+      "ip": "192.168.0.59",
+      "deviceId": 260001,
+      "pointInstance": 2,
+      "objectType": 2,
+      "name": null,
+      "value": null,
+      "error": null,
+      "errorMessage": null,
+      "x_axis": 0,
+      "y_axis": 0
+    }
+  ]
+}
