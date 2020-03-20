@@ -1,12 +1,18 @@
 export default (props) => (
-  <div className="canvas">
-    {props.children}
+  <div className="wrapper">
+    <div className="canvas">
+      {props.children}
+    </div>
     <style jsx>{`
+      .wrapper {
+        background-color: #f7f7f7;
+      }
       .canvas {
         width: 1250px;
-        height: 700px;
+        height: 100vh;
         position: relative;
-        background-color: #f7f7f7;
+        margin: 0 auto;
+        border: 1px solid #e7e7e7;
       }
     `}</style>
   </div>

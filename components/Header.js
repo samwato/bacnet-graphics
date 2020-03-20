@@ -1,6 +1,7 @@
 import fetch from 'unfetch'
 import useSWR from 'swr'
 import Link from 'next/link'
+import { ModeContext } from './mode-context'
 
 const fetcher = url => fetch(url).then(res => res.json())
 
@@ -22,21 +23,34 @@ export default () => {
         </Link>
         {pageData.graphics.map(link => (
           <Link key={link.id} href="/ahu/[id]" as={`/ahu/${link.id}`}>
-            <a>{link.name}</a>
+            <a>{link.menu}</a>
           </Link>
         ))}
       </div>
 
+      <ModeContext.Consumer>
+        {({editMode, toggleMode}) => (
+          <div>
+            <button
+              onClick={toggleMode}>
+              {editMode ? 'Preview' : 'Edit'}
+            </button>
+          </div>
+        )}
+      </ModeContext.Consumer>
+
       <style jsx>{`
         .header {
           background-color: #fff;
-          height: 50px;
           width: 100;
-          margin: 0 20px;
+          padding: 0 20px;
           display: flex;
           flex-direction: row;
           align-items: center;
           font-family: sans-serif;
+          box-shadow: 0 2px 2px -1px rgba(152, 162, 179, 0.3), 0 1px 5px -2px rgba(152, 162, 179, 0.3);
+          border-bottom: 1px solid #D3DAE6;
+          box-sizing: border-box;
         }
         .title {
           margin-right: 20px;
@@ -45,9 +59,16 @@ export default () => {
           margin: 0;
         }
         a {
-          padding: 20px;
+          padding: 15px 20px;
           text-decoration: none;
-          color: grey;
+          color: #333;
+          font-size: 0.8em;
+          height: 100%;
+          display: inline-block;
+        }
+        a:hover {
+          color: #444;
+          background-color: rgba(0,0,0,0.05);
         }
       `}</style>
 

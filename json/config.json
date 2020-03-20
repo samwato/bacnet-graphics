@@ -3,15 +3,24 @@
   "graphics": [
     {
       "id": "ahu_1",
-      "name": "AHU-1"
+      "menu": "AHU 1",
+      "title": "BACnet Graphic - AHU-1",
+      "template": "ahu_v1.png",
+      "points": []
     },
     {
       "id": "ahu_2",
-      "name": "AHU-2"
+      "menu": "AHU 2",
+      "title": "BACnet Graphic - AHU-2",
+      "template": "ahu_v1.png",
+      "points": []
     },
     {
       "id": "ahu_3",
-      "name": "AHU-3"
+      "menu": "AHU 3",
+      "title": "BACnet Graphic - AHU-3",
+      "template": "ahu_v1.png",
+      "points": []
     }
   ]
 }
